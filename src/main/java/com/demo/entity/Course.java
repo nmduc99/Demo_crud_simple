@@ -19,6 +19,13 @@ public class Course {
 	private List<Student> student;
 
 	
+	
+	
+	
+	public Course() {
+		super();
+	}
+
 	public Course(Long id, String code, String name, String descrition) {
 		super();
 		this.id = id;

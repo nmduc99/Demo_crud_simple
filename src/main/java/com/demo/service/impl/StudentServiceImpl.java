@@ -1,9 +1,11 @@
 package com.demo.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import com.demo.entity.Student;
 import com.demo.repository.StudentRepository;
@@ -24,6 +26,21 @@ public class StudentServiceImpl implements StudentService{
 	public List<Student> getAll() {
 		// TODO Auto-generated method stub
 		return studentRepo.findAll();
+	}
+	
+	@Override
+	public Optional<Student> findById(Long id) {
+		return studentRepo.findById(id);
+	}
+	
+	@Override
+	public void deleteById(Long id) {
+		studentRepo.deleteById(id);
+	}
+	
+	@Override
+	public Student save(Student student) {
+		return studentRepo.save(student);
 	}
 	
 }

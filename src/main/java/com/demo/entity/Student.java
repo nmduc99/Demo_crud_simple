@@ -26,7 +26,7 @@ public class Student {
 	private List<Course> course;
 	
 	public Student() {
-		
+		super();
 	}
 	public Student(long id,String name, String codeStudent, String addresss, String email) {
 		this.id= id;
