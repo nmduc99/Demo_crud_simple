@@ -20,7 +20,7 @@ public class Student {
 	private String email;
 	@ManyToMany
 	@JoinTable(name= "couse_student", // Tạo ra một join table tên là"course_student"
-			joinColumns = @JoinColumn(name= "student_id"),// Trong đó, khóa ngoại chính là student_id trỏ tới class hiện tại (Student)
+			joinColumns = @JoinColumn(name= "student_id"), // Trong đó, khóa ngoại chính là student_id trỏ tới class hiện tại (Student)
 			inverseJoinColumns =@JoinColumn(name= "course_id") //Khóa ngoại thứ 2 trỏ tới thuộc tính ở dưới (Course)
 			)
 	private List<Course> course;

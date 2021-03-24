@@ -1,4 +1,4 @@
-package com.demo.service.impl;
+		package com.demo.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,7 +24,6 @@ public class StudentServiceImpl implements StudentService{
 	
 	@Override
 	public List<Student> getAll() {
-		// TODO Auto-generated method stub
 		return studentRepo.findAll();
 	}
 	
