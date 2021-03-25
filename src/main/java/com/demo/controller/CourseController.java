@@ -21,7 +21,7 @@ import com.demo.service.CourseService;
 
 
 @RestController
-@CrossOrigin("http://localhost:8080")
+@CrossOrigin("http://localhost:3000")
 public class CourseController {
 
 	

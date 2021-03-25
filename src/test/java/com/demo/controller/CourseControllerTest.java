@@ -1,6 +1,7 @@
 package com.demo.controller;
 
 import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,8 +12,8 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import com.demo.DemoCrudSimpleApplication;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = DemoCrudSimpleApplication.class,

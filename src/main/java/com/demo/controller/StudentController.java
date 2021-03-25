@@ -20,7 +20,7 @@ import com.demo.entity.Student;
 import com.demo.service.StudentService;
 
 @RestController
-@CrossOrigin("http://localhost:8080")
+@CrossOrigin("http://localhost:3000")
 public class StudentController {
 	@Autowired	
 	private StudentService studentService;
