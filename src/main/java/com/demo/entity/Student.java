@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Student {
 
@@ -18,8 +20,8 @@ public class Student {
 	private String codeStudent;
 	private String address;
 	private String email;
-	@ManyToMany
-	@JoinTable(name= "couse_student", // Tạo ra một join table tên là"course_student"
+	@ManyToMany	
+	@JoinTable(name= "course_student", // Tạo ra một join table tên là"course_student"
 			joinColumns = @JoinColumn(name= "student_id"), // Trong đó, khóa ngoại chính là student_id trỏ tới class hiện tại (Student)
 			inverseJoinColumns =@JoinColumn(name= "course_id") //Khóa ngoại thứ 2 trỏ tới thuộc tính ở dưới (Course)
 			)

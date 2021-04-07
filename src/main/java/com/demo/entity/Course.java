@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Course {
 	@Id
@@ -15,12 +17,10 @@ public class Course {
 	private String code;
 	private String name;
 	private String descrition;
-	@ManyToMany(mappedBy = "course")    // mappedBy trỏ tới tên biến course ở trong Course.
+	@ManyToMany(mappedBy = "course")// mappedBy trỏ tới tên biến course ở trong Course.
+	@JsonIgnore
 	private List<Student> student;
-
-	
-	
-	
+		
 	
 	public Course() {
 		super();
