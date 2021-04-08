@@ -12,4 +12,3 @@ INSERT INTO STUDENT (name,code_student,address,email) values ('Ho Minh', '175524
 
 
 
-INSERT INTO COURSE_STUDENT (STUDENT_ID,COURSE_ID) values (1,1);
