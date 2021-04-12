@@ -19,7 +19,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.demo.entity.Course;
 import com.demo.service.CourseService;
 
-
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class CourseController {

@@ -11,4 +11,5 @@ INSERT INTO STUDENT (name,code_student,address,email) values ('Nguyen Em', '1757
 INSERT INTO STUDENT (name,code_student,address,email) values ('Ho Minh', '1755242a', 'Lam Dong', 'awds123@gmail.com');
 
 
-
+INSERT INTO COURSE_STUDENT(student_id,course_id)
+values('1','1');
