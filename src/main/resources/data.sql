@@ -13,3 +13,6 @@ INSERT INTO STUDENT (name,code_student,address,email) values ('Ho Minh', '175524
 
 INSERT INTO COURSE_STUDENT(student_id,course_id)
 values('1','1');
+
+INSERT INTO COURSE_STUDENT(student_id,course_id)
+values('2','2');
