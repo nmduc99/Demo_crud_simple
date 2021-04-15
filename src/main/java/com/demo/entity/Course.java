@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -17,11 +19,14 @@ public class Course {
 	private String code;
 	private String name;
 	private String descrition;
-	@ManyToMany(mappedBy = "course")// mappedBy trỏ tới tên biến course ở trong Course.
+	@ManyToMany //(mappedBy = "course")// mappedBy trỏ tới tên biến course ở trong Course.
+	@JoinTable(name= "course_student", // Tạo ra một join table tên là"course_student"
+	joinColumns = @JoinColumn(name= "student_id"), // Trong đó, khóa ngoại chính là student_id trỏ tới class hiện tại (Student)
+	inverseJoinColumns =@JoinColumn(name= "course_id") //Khóa ngoại thứ 2 trỏ tới thuộc tính ở dưới (Course)
+	)
 	@JsonIgnore
 	private List<Student> student;
 		
-	
 	public Course() {
 		super();
 	}
