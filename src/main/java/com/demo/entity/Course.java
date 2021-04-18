@@ -24,7 +24,7 @@ public class Course {
 	joinColumns = @JoinColumn(name= "student_id"), // Trong đó, khóa ngoại chính là student_id trỏ tới class hiện tại (Student)
 	inverseJoinColumns =@JoinColumn(name= "course_id") //Khóa ngoại thứ 2 trỏ tới thuộc tính ở dưới (Course)
 	)
-	@JsonIgnore
+	//@JsonIgnore
 	private List<Student> student;
 		
 	public Course() {
